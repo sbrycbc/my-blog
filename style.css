@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(224, 223, 223);
+    margin: 20px;
+}
+
+header {
+    background-color: white;
+    text-align: center;
+    width: 100%;
+    height:9rem;
+    line-height: 10rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: 200px 200px 200px 150px 150px;
+    gap: 1rem
+}
+
+.blog-1 {
+    background-color: white;
+    grid-area: 1/1/3/2;
+    padding: 1rem;
+    margin-top: 1rem ;
+}
+
+.blog-2 {
+    background-color: white;
+    grid-area: 3/1/6/2;
+    padding: 1rem;
+}
+.blog-1 img ,
+.blog-2 img {
+    width: 100%;
+    height: 15rem;
+    padding: 1rem 0 0 0;
+}
+.about-me {
+    background-color: white;
+    grid-area: 1/2/2/3;
+    padding: 2rem;
+    margin-top: 1rem;
+}
+
+.about-me img {
+    width: 30%;
+    border-radius: 50%;
+}
+
+.populer {
+
+    background-color: white;
+    grid-area: 2/2/4/3;
+    padding: 2rem;
+}
+
+.populer img {
+    width:60%;
+}
+
+.folew-me {
+    background-color: white;
+    grid-area: 4/2/5/3;
+    padding: 2rem;
+}
+
+footer {
+    background-color: rgb(172, 172, 172);
+    color: black;
+    text-align: center;
+    width: 100%;
+    height:9rem;
+    line-height: 9rem;
+    font-size: 0.75rem;
+    margin-top: 1rem;
+}
+p{ 
+    margin-top: 0.5rem;
+}
+
+h4 {
+    margin-bottom: 0.5rem;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width:700px) {
+    
+    body {
+        color:red;
+    }
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .blog-1 {
+        grid-area: 1/1/3/3;
+    }
+
+    .blog-2 {
+        grid-area: 3/1/5/3;
+    }
+
+    .about-me {
+        grid-area:5/1/6/2;
+        height:30rem;
+    }
+
+    .populer {
+        grid-area: 5/2/7/3;
+    }
+    .populer img { 
+        height: 20%;
+    }
+
+    .folew-me {
+        grid-area: 6/1/7/2;
+    }
+}
+
+@media screen and (max-width:500px) {
+    body {
+        color: rgb(87, 5, 165);
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+    } 
+}
